@@ -1,11 +1,17 @@
-# future_age_calculator.py
+# finance_calculator.py
 
-# Prompt the user for their current age
-current_age = int(input("How old are you? "))
+# Prompt the user for financial details
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
 
-# Calculate future age in 2050 (assuming current year is 2023)
-future_age = current_age + 27
+# Calculate monthly savings
+monthly_savings = monthly_income - monthly_expenses
 
-# Print the result
-print(f"In 2050, you will be {future_age} years old.")
+# Calculate projected annual savings with 5% interest
+annual_savings = monthly_savings * 12
+projected_savings = annual_savings + (annual_savings * 0.05)
+
+# Output the results
+print(f"Your monthly savings are ${monthly_savings:.2f}.")
+print(f"Projected savings after one year, with interest, is: ${projected_savings:.2f}.")
 
